@@ -113,7 +113,7 @@ li img {
 
 /* header: foto+tekst, filteren/sorteren op klein formaat */
 header {
-    background: url("../fe/images/sfeerbeeld.jpg");
+    background: url("web/fe/images/sfeerbeeld.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
