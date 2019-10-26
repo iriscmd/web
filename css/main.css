@@ -1,0 +1,753 @@
+/* fonts */
+
+@font-face {
+    font-family: "NexaBold";
+    src: url("../fe/fonts/NexaBold.otf");
+}
+
+@font-face {
+    font-family: "NexaRegular";
+    src: url("../fe/fonts/NexaRegular.otf");
+}
+
+/* algemeen */
+
+h1,
+h2 {
+    font-family: "Nexabold";
+}
+
+body {
+    font-family: "NexaRegular";
+    margin: 0;
+}
+
+p {
+    font-family: "NexaRegular";
+    font-size: 0.875rem;
+    color: #606060;
+    padding-bottom: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* navigatie 
+De navigatie bestaat op klein formaat uit icons en op groter formaat uit tekst */
+
+nav a {
+    color: #00d66c;
+    font-family: "NexaBold";
+    text-decoration: none;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+}
+
+.main-nav {
+    display: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    z-index: 9;
+}
+
+nav ul {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, auto auto auto);
+    justify-content: center;
+    padding-left: 0em;
+    margin-top: 14px;
+
+}
+
+@media only screen and (min-width:41em) {
+    nav ul {
+        margin-top: 25px;
+    }
+}
+
+li img {
+    height: 3.125em !important;
+    padding-right: 2rem;
+    width: 3.125em !important;
+}
+
+/* op tablet formaat verandert de navigatie */
+@media only screen and (min-width:41em) and (max-width:60em) {
+    .main-nav {
+        display: flex;
+    }
+
+    li img {
+        display: none;
+    }
+
+    aside {
+        display: none;
+    }
+}
+
+/* op desktop formaat verandert de navigatie */
+@media only screen and (min-width: 60em) {
+    .main-nav {
+        display: flex;
+    }
+
+    li img {
+        display: none;
+    }
+}
+
+/* header: foto+tekst, filteren/sorteren op klein formaat */
+header {
+    background: url("../fe/images/sfeerbeeld.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30em;
+}
+
+header h1 {
+    display: none;
+}
+
+
+/* tekst verschijnt op groot formaat */
+
+@media only screen and (min-width:60em) {
+    header h1 {
+        background-color: #2800a0;
+        border-radius: 1.3rem;
+        color: white;
+        display: block;
+        margin-left: 5rem;
+        margin-top: 4rem;
+        max-width: 8em;
+        padding: 2rem;
+        position: relative;
+        top: 20%;
+    }
+}
+
+
+/* filteren sorteren */
+
+aside {
+    display: none;
+}
+
+form.standard {
+    background-color: rgb(255, 250, 250, .8);
+    border-radius: 1.3rem;
+    height: 22em;
+    margin: auto;
+    margin-bottom: 4rem;
+    width: 22em;
+    position: relative;
+    top: 19%;
+}
+
+#index select {
+    display: block;
+    margin: auto;
+}
+
+#index legend {
+    font-size: 1.5rem;
+}
+
+#index h2 {
+    color: #00d66c;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+#index input[type=checkbox] {
+    display: inline;
+    width: 1em;
+}
+
+#index fieldset {
+    text-align: center;
+}
+
+/* op groter formaat verschijnt filteren/sorteren links op de website en verdwijnt hij in header */
+
+@media only screen and (min-width: 60em) {
+    .standard {
+        display: none;
+    }
+
+    aside {
+        display: block;
+        border: 0.1rem solid #ff3268;
+        border-top-left-radius: 1.2rem;
+        border-top-right-radius: 1.2rem;
+        float: left;
+        margin-left: 1.9rem;
+        margin-top: 35px;
+        width: 12em;
+    }
+
+    aside h2 {
+        background-color: #ff3268;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        color: #ffffff;
+        font-family: "NexaBold";
+        padding: 0.5rem;
+        margin-top: 0rem;
+    }
+
+    /* bron Rick Valkering */
+    fieldset {
+        border: none;
+        display: flex;
+        flex-flow: column;
+    }
+
+    legend {
+        font-family: "NexaBold";
+    }
+
+    select {
+        display: block;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+
+    aside label {
+        font-family: "NexaRegular";
+        margin: -1rem 0 1.1rem 1.3rem;
+    }
+
+    aside input[type="checkbox"] {
+        width: 4em;
+        margin-left: 0rem;
+
+    }
+}
+
+
+/* de blokken met verhalen */
+
+article img {
+    border-radius: 0.8rem;
+    height: 10em;
+    width: 100%;
+}
+
+.storyBlocks {
+    background-color: white;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.storyBlocks article {
+    border: 0.1rem solid #d3d3d3;
+    border-radius: 1rem;
+    height: 24em;
+    margin: 1rem;
+    width: 18em;
+}
+
+span {
+    color: #2800a0;
+}
+
+
+/* aanbevolen verhalen */
+
+.aanbevolen {
+    background-color: #f3e5d8;
+}
+
+.aanbevolen article {
+    border: 0.1rem solid #d3d3d3;
+    border-radius: 1rem;
+    height: 10em;
+    margin: 1rem;
+    width: 18em;    
+}
+
+/* bron: https://www.w3schools.com/css/css_grid.asp */
+.gridlayout {
+    display: grid;
+    grid-gap: 1em;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.aanbevolen h2 {
+    color: #00d66c;
+    text-align: center;
+    padding-top: 70px;
+}
+
+/* aantal verhalen naast elkaar verandert op verschillend formaat scherm */
+
+@media only screen and (min-width:41em) and (max-width:60em) {
+    .gridlayout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media only screen and (min-width:60em) and (max-width:83em) {
+    .gridlayout {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width: 83em) {
+    .gridlayout {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/* inlog pagina
+-- Bij dit formulier kun je je naam */
+
+main {
+    background: url(../fe/images/inlogbeeld.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 960px;
+    padding-top: 1rem;
+}
+
+img + h3 {
+    color: #ff3268;
+}
+
+.forminlog {
+    background-color: rgb(255, 250, 250, .8);
+    border-radius: 1rem;
+    height: 30em;
+    margin: auto;
+    margin-bottom: 4em;
+    width: 22em;
+    position: relative;
+    top: 5%;
+}
+
+form legend {
+    color: #ff3268;
+    font-size: 2.375rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+fieldset {
+    border: none;
+}
+
+label {
+    text-align: left;
+}
+
+#login input {
+    border: 0.1rem solid #D3D3D3;
+    border-radius: 0.8rem;
+    display: block;
+    font-family: "NexaRegular";
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.7rem;
+    width: 18em;
+}
+
+#login input:focus {
+    background-color: #fa5757;
+}
+
+#login input:valid:focus {
+    background-color: #00d66c;
+}
+
+button[type=submit] {
+    background-color: #ff3268;
+    border-radius: 0.4rem;
+    color: white;
+    font-family: "NexaBold";
+    font-size: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    width: 10rem;
+}
+
+.NewAccount {
+    color: #00d66c;
+}
+
+#login header {
+    background-image: none;
+    height: 4em;
+}
+
+@media only screen and (min-width:41em) and (max-width:60em) {
+    #login header {
+        background-image: none;
+        height: 2.3em;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    #login header {
+        background-image: none;
+        height: 2em;
+    }
+}
+
+/* verhalen pagina*/
+
+#verhaal img:nth-of-type(1) {
+    display: block;
+    width: 100vw;
+}
+
+#verhaal img:nth-of-type(2) {
+    display: none;
+}
+
+#verhaal img:nth-of-type(3) {
+    display: none;
+}
+
+@media only screen and (min-width:41em) and (max-width:60em) {
+
+    #verhaal img:nth-of-type(1) {
+        display: none;
+    }
+
+    #verhaal img:nth-of-type(2) {
+        display: block;
+        width: 100vw;
+    }
+
+    #verhaal img:nth-of-type(3) {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+
+    #verhaal img:nth-of-type(1) {
+        display: none;
+    }
+
+    #verhaal img:nth-of-type(2) {
+        display: none;
+    }
+
+    #verhaal img:nth-of-type(3) {
+        display: block;
+        width: 100vw;
+    }
+}
+
+#verhaal header {
+    background-image: none;
+    height: 4em;
+}
+
+@media only screen and (min-width:41em) and (max-width:60em) {
+    #verhaal header {
+        height: 3em;
+    }
+}
+
+
+@media only screen and (min-width: 60em) {
+    #verhaal header {
+        height: 2em;
+    }
+}
+
+
+.titel {
+    background-color: #f3e5d8;
+    color: #ff3268;
+    margin-bottom: 1rem;
+    margin-top: 1.2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+@media only screen and (min-width:41em) {
+    .titel {
+        margin-top: 0rem;
+    }
+}
+
+.titel p {
+    color: white;
+    font-size: 1.3rem;
+}
+
+/* footer */
+
+footer {
+    background-color: #ff3268;
+}
+
+footer p {
+    color: white;
+    font-family: "NexaRegular";
+    padding: 1.2rem;
+    text-align: center;
+}
+
+article p,
+img + h3 {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+
+/* liken micro interactie */
+
+article .hartje {
+    background-image: url("../fe/images/hartjeleeg.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 4em;
+    border: none;
+    margin-left: 15rem;
+    transition: all 0.2s ease-in;
+}
+
+.hartjegroot {
+    transform: scale(1.2);
+    background-image: url("../fe/images/hartjevol.png") !important;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+/* download micro interactie */
+
+.bewaar {
+    background-image: url("images/download5.png");
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 5em;
+    display: block;
+    margin: auto;
+    background-color: #00d66c;
+    transition: background-color 1s, transform 1s;
+}
+
+.bewaarclick {
+    background-color: #ff3268;
+    transform: rotate(360deg);
+}
+
+
+/* search micro interactie 
+Deze micro interactie zorgt ervoor dat zodra je op "zoek verhaal" klikt deze groter wordt + 
+de kleur verandert zodat de gebruiker op deze manier genoeg ruimte heeft om te typen */
+
+.zoeken {
+    position: absolute;
+    top: 50%;
+}
+
+.zoeken {
+    transition: 2s;
+}
+
+.zoeken input:hover {
+    padding: 0.7rem;
+
+}
+
+.zoeken input {
+    display: none;
+}
+
+@media only screen and (min-width: 60em) {
+    .zoeken input {
+        display: flex;
+        background-color: #ff3268;
+        border: 1px solid transparent;
+        border-radius: 0.8rem;
+        height: 1.5em;
+        padding: 0.5rem;
+        width: 6em;
+        margin-left: 5rem;
+        transition: all 0.2s ease-in;
+        font-family: "NexaRegular";
+    }
+
+    .zoeken ::placeholder {
+        color: white;
+    }
+}
+
+
+.showsearch {
+    background-color: #00d66c !important;
+    border-radius: 1rem;
+    width: 10rem !important;
+    height: 1.7rem !important;
+}
+
+
+#zoekresultaat h2 {
+    color: #00d66c;
+}
+
+#zoekresultaat .storyBlocks {
+    background-color: white;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+#zoekresultaat article {
+    margin-left: 0px;
+}
+
+#zoekresultaat h1 {
+    display: block !important;
+
+}
+
+.filterDiv {
+    height: 24em !important;
+    width: 18em !important;
+    display: none;
+
+}
+
+.show {
+  display: block;
+}
+
+.btn {
+    border-radius: 2rem;
+    padding: 10px;
+    background-color: #2800a0;
+    font-family: "NexaRegular";
+    color: white;
+}
+
+.btn:hover {
+    padding: 12px;
+}
+
+#myBtnContainer {
+    margin-left: 35px;
+    margin-bottom: 20px;
+}
+
+nav ul li span {
+    color: white;
+}
+
+.showgetal {
+    transform: scale(1);
+    border-radius: 1em;
+    color: #ff3268;
+    transition: 0.4s;
+    padding-left: 11px;
+    padding-right: 11px;
+    font-family: "NexaBold";
+
+}
+
+.mastergrid {
+    margin: 40px;
+}
+
+.sectiongrid {
+    margin: 50px;
+}
+
+#ingelogd .storyBlocks {
+    justify-content: left;
+}
+
+#ingelogd article {
+    margin-left: 0px;
+}
+
+#ingelogd h2 {
+    color: #00d66c;
+}
+
+button.share {
+    background-color: #00d66c;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 10rem;
+    height: 3rem;
+    font-family: "NexaBold";
+    color: white;
+    font-size: 20px;
+    transition: all 0.2s ease-in;
+}
+
+.content {
+padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: white !important;
+  width: 7rem;
+  height: 7rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  margin: auto;
+  color: #00d66c !important;
+}
+
+.content p {
+    color: #00d66c !important;
+}
+
+.geslaagd {
+    padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
+#login .forminlog label::after {
+    content: url("images/icondown.png");
+    margin-left: 0.5rem;
+}
+
+
+
+
+#verhaal nav ul {
+        margin-top: 0px;
+}
+
+@media only screen and (min-width:41em) {
+    #verhaal nav ul {
+        margin-top: 25px;
+    }

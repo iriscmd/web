@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transavia verhalen</title>
+    <link rel="stylesheet" href="../fe/main.css" />
+    <link rel="stylesheet" href="../fe/fonts/NexaBold.otf">
+    <link rel="stylesheet" href="../fe/fonts/NexaRegular.otf">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <!-- navigatie boven aan pagina -->
+        <nav>
+            <ul>
+                <li class="main-nav"><a href="index.html">Home</a></li>
+                <li class="main-nav"><a href="#link">Verhalen</a></li>
+                <li class="main-nav"><a href="inloggen.html">Inloggen</a><span>1</span></li>
+                <!-- icons die verschijnen op kleiner formaat scherm -->
+                <li>
+                    <a href="#"><img src="../fe/images/verhalen.png" alt="Home"></a>
+                </li>
+                <li>
+                    <a href="inloggen.html"><img src="../fe/images/inloggen.png" alt="Home"></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- einde navigatie -->
+        <h1> 99 manieren om een verhaal te vertellen</h1>
+        <form class="zoeken" action="zoekresultaat.html">
+            <input type="text" placeholder="zoek verhaal">
+        </form>
+
+        <form class="standard" action="#" id="index">
+            <h2>Je keuze</h2>
+            <fieldset>
+                <legend>Genre</legend>
+                <input type="checkbox" id="kunst" name="kunst">
+                <label for="kunst">Kunst</label>
+                <input type="checkbox" id="politiek" name="politiek">
+                <label for="politiek">Politiek</label>
+                <input type="checkbox" id="spanning" name="spanning">
+                <label for="spanning">Spanning</label>
+                <input type="checkbox" id="liefde" name="liefde">
+                <label for="liefde">Liefde</label>
+                <input type="checkbox" id="humor" name="humor">
+                <label for="humor">Humor</label>
+                <input type="checkbox" id="oorlog" name="oorlog">
+                <label for="oorlog">Oorlog</label>
+            </fieldset>
+            <fieldset class="waardering">
+                <legend>Waardering</legend>
+                <input type="checkbox" id="1to5" name="1to5">
+                <label for="1to5">1-5 sterren</label>
+                <input type="checkbox" id="6to10" name="6to10">
+                <label for="6to10">6-10 sterren</label>
+            </fieldset>
+        </form>
+    </header>
+
+    <!-- aside filteren sorteren -->
+    <aside>
+        <h2>Je keuze</h2>
+        <div id="myBtnContainer">
+        <button class="btn" onclick="filterSelection('liked')">Fictief</button>
+        <button class="btn" onclick="filterSelection('shared')">Roman</button>
+    </div>
+        <fieldset>
+            <legend>Waardering</legend>
+            <input type="checkbox" id="1to5" name="1to5">
+            <label for="1to5">1-5 sterren</label>
+            <input type="checkbox" id="6to10" name="6to10">
+            <label for="6to10">6-10 sterren</label>
+        </fieldset>
+        <fieldset>
+            <legend>Lengte</legend>
+            <input type="checkbox" id="short" name="short">
+            <label for="short">> 50 woorden</label>
+            <input type="checkbox" id="middle" name="middle">
+            <label for="middle">> 100 woorden</label>
+            <input type="checkbox" id="long" name="long">
+            <label for="long">+ 100 woorden</label>
+        </fieldset>
+    </aside>
+
+    <!-- alle verhalen -->
+
+    <div class="storyBlocks container" id="link">
+        <article class="filterDiv liked">
+            <a href="hongerwinter.html"><img src="images/hongerwintertm.png">
+                <h3>Hongerwinter</h3>
+                <p>Ik stap uit, euh… Hoe heet het? Zo’n vervoersdinges op wielen. Van de gemeente. Wit met blauw. Kom. Lijn 12. Of was het 21? Ik weet het niet. Ik stap uit en loop achter een wagentje aan. Van wie is dat wagentje? <span>[…]</span></p>
+            </a>
+            <button class="hartje"></button>
+        </article>
+        <article class="filterDiv all">
+            <a href="stoned.html"><img src="images/stonedtm.png">
+                <h3>Stoned</h3>
+                <p>Zodra ik de bus uitstap steek ik een dikke vette joint op. De derde van de dag al. Ik neem een lange haal, inhaleer diep, houd de rook een tijdje binnen en blaas dan, de lippen gerond, het hoofd een beetje in de nek. <span>[…]</span></p>
+            </a>
+            <button class="hartje"></button>
+        </article>
+        <article>
+            <a href="kinderboek.html"><img src="images/kinderboektm.png">
+                <h3>Kinderboek</h3>
+                <p>Kijk, daar gaat Max. Dag Max! Hij stapt uit de bus. Wat duwt hij daar vooruit? Jawel, een heuse kinderwagen! En wat voor één! Een groene! Zijn zoontje ligt er in te slapen. Die heeft gelukkig geen last van de kou. Want het is koud joh! <span>[…]</span></p>
+            </a>
+            <button class="hartje"></button>
+        </article>
+        <article>
+            <img src="images/blindtm.png">
+            <h3>Blind</h3>
+            <p>Piepende remmen, bus 21 komt tot stilstand. De stem van de buschauffeur, naar mij gericht, zakelijk, niet vriendelijk, niet onvriendelijk: ‘Centraal Station, eindhalte’. Het sissende geluid van busdeuren die open gaan.[…]</p>
+            <button class="hartje"></button>
+        </article>
+        <article>
+            <img src="images/zombietm.png">
+            <h3>Zombie</h3>
+            <p>Duizenden hongerige ondoden lopen zielloos over het stationsplein. Op zoek naar voedsel, naar half vergane hondenlijken, naar vers mensenvlees. Het is gekkenwerk dat ik hier ben.[…]</p>
+            <button class="hartje"></button>
+        </article>
+        <article>
+            <img src="images/regenboogtm.png">
+            <h3>Regenboog</h3>
+            <p>Bus 21. Ik stap uit. Het is een gure dag, geen ultraviolette zonnestralen die het tere huidje van mijn zoontje aantasten. Hij ligt te slapen in z’n paarse kinderwagen.[…]</p>
+            <button class="hartje"></button>
+        </article>
+    </div>
+
+    <section class="aanbevolen">
+        <h2>Aanbevolen verhalen</h2>
+        <div class="gridlayout">
+            <article>
+                <a href="hongerwinter.html">
+                    <img src="images/hongerwintertm.png">
+                </a>
+            </article>
+            <article>
+                <a href="stoned.html">
+                    <img src="images/stonedtm.png">
+                </a>
+            </article>
+            <article>
+                <a href="kinderboek.html">
+                    <img src="images/kinderboektm.png">
+                </a>
+            </article>
+            <article>
+                <img src="images/blindtm.png">
+            </article>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <p> © Transavia 2019, Iris Ruha</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="search.js"></script>
+    <script src="filter.js"></script>
+
+
+</body>
+
+</html>

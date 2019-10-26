@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Account</title>
+    <link rel="stylesheet" href="../fe/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body id="login">
+<header>
+    <!-- navigatie boven aan pagina -->
+    <nav>
+        <ul>
+            <li class="main-nav"><a href="index.html">Home</a></li>
+            <li class="main-nav"><a href="#">Verhalen</a></li>
+            <li class="main-nav"><a href="inloggen.html">Inloggen</a></li>
+            <!-- icons die verschijnen op kleiner formaat scherm -->
+            <li>
+                <a href="index.html"><img src="../fe/images/verhalen.png" alt="Home"></a>
+            </li>
+            <li>
+                <a href="inloggen.html"><img src="../fe/images/inloggen.png" alt="Home"></a>
+            </li>
+        </ul>
+    </nav>
+</header>
+    
+<main>
+    <form action="ingelogd.html" class="forminlog">
+        <fieldset>
+            <legend>Inloggen</legend>
+            <label for="name">Naam</label>
+            <input id="name" type="text" placeholder="Uw naam" required>
+            <label for="email">Email adress</label>
+            <input type="email" id="email" name="email" placeholder="verhalen@transavia.nl" required>
+            <label for="password">Wachtwoord</label>
+            <input id="password" type="password" name="password" placeholder="******" required>
+            <button href="index.html" type="submit">Inloggen</button>
+            <p>Heb je nog geen account? <a class="NewAccount" href="signup.html"> Meld je hier aan </a></p>
+        </fieldset>
+    </form>
+</main>
+
+<!-- footer -->
+<footer>
+    <p> © Transavia 2019, Iris Ruha</p>
+</footer>
+</body>
+
+</html>
